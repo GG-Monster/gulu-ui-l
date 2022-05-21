@@ -1,12 +1,12 @@
 <template>
-<div>Monster</div>
+<div>Frank</div>
 
 
 </template>
 
 <script>
 export default {
-  name: 'Monster',
+  name: 'Frank',
   props: {
   },
   data() {

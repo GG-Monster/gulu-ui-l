@@ -9,7 +9,8 @@ import { ref,provide } from 'vue'
 export default {
   name: 'App',
   setup(){
-    const menuVisible=ref(true)
+    const width=document.documentElement.clientWidth
+    const menuVisible=ref(width<=500?false:true)
     provide('menuVisible',menuVisible)
     return {menuVisible}
   },

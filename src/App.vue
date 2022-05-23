@@ -2,7 +2,7 @@
 <router-view></router-view>
 </template>
 
-<script>
+<script lang="ts">
 import Monster from './components/Home.vue'
 import Frank from './components/Frank.vue'
 

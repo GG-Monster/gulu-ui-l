@@ -6,16 +6,19 @@
             <h2>组建列表</h2>
             <ol>
                 <li>
-                    <router-link to="/doc/Switch">switch组件</router-link></li>
+                    <router-link to="/doc/switch">switch组件</router-link></li>
                 <li>
-                    <router-link to="/doc/Button">button组件</router-link></li>
+                    <router-link to="/doc/button">button组件</router-link></li>
                 <li>
-                    <router-link to="/doc/Dialog">dialog组件</router-link></li>
+                    <router-link to="/doc/dialog">dialog组件</router-link></li>
                 <li>
-                    <router-link to="/doc/Tabs">tabs组件</router-link></li>
+                    <router-link to="/doc/tabs">tabs组件</router-link></li>
             </ol>
         </aside>
-        <main>主内容</main>
+        <main>
+            <router-view></router-view>
+            
+            </main>
     </div>
 </div>
 </template>

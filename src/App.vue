@@ -1,15 +1,16 @@
 <template>
 <router-view></router-view>
 </template>
-
 <script lang="ts">
-import Monster from './components/Home.vue'
-import Frank from './components/Frank.vue'
+import Home from './views/Home.vue'
+import Doc from './views/Doc.vue'
 
 export default {
   name: 'App',
   components: {
-    Monster,Frank
-  }
+    Home,
+    Doc,
+
+}
 }
 </script>

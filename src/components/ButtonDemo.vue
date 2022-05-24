@@ -54,6 +54,8 @@
 <h1>示例5</h1>
 <div>
     <Button loading>loading</Button>
+    <Button>loading over</Button>
+
 </div>
 </template>
 <script lang="ts">

@@ -1,11 +1,9 @@
 <template>
-
     <button class="gulu-button" :class="classes" 
     :disabled="disabled">
     <span v-if="loading" class="gulu-loadingIndicator"></span>
         <slot></slot>
     </button>
-
 </template>
 
 <style lang="scss">
@@ -179,7 +177,7 @@ export default{
             default:false
         },
     },
-    inheritAttrs:false,
+    // inheritAttrs:true,
     setup(props){
         const {size,theme,level}=props
         const classes=computed(()=>{

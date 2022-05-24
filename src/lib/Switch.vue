@@ -13,8 +13,7 @@ button{
     background: #bfbfbf;
     border-radius: $h/2;
     position: relative;
-}
-span {
+    > span {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -24,24 +23,30 @@ span {
     border-radius: $h2/2;
     transition:all 250ms;
 }
-.checked{
-    background: blue;
-}
-.checked > span{
+
+    &.checked{
+    background: #1890ff;
+    > span{
     left:calc(55%);
 }
-button:focus{ 
+}
+&:focus{ 
     outline: none;
 }
-button:active{ 
+&:active{ 
     > span{
         width:$h2+4px;
-        margin-left: -4px;
     }
 }
+    &:checked:active{
+        > span {
+            width:$h2+4px;
+            margin-left:-4px;
+        }
+    }
 
 
-
+}
 
 </style>
 <script lang="ts">

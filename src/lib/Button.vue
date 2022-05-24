@@ -2,7 +2,7 @@
 
     <button class="gulu-button" :class="classes" 
     :disabled="disabled">
-    <span v-if="loading" class="gulu-loadingIndicator"> </span>
+    <span v-if="loading" class="gulu-loadingIndicator"></span>
         <slot></slot>
     </button>
 
@@ -74,6 +74,7 @@ $grey: grey;
     padding: 0 4px;
   }
   &.gulu-theme-button {
+      padding: 0 12px;
     &.gulu-level-main {
       background: $blue;
       color: white;

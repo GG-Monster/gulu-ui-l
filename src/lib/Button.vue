@@ -26,6 +26,16 @@ $radius: 4px;
   border: 1px solid $border-color;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
+  &.gulu-size-big{
+      font-size: 24px;
+      height: 48px;
+      padding: 0 16px
+    }
+  &.gulu-size-small{
+      font-size: 12px;
+      height: 20px;
+      padding: 0 4px;
+    }
   & + & {
     margin-left: 8px;
   }
@@ -33,8 +43,6 @@ $radius: 4px;
   &:focus {
     color: $blue;
     border-color: $blue;
-  }
-  &:focus {
     outline: none;
   }
   &::-moz-focus-inner {
@@ -54,23 +62,13 @@ $radius: 4px;
     border-color: transparent;
     box-shadow: none;
     color: inherit;
-
     &:hover,
     &:focus {
       background: darken(white, 5%);
     }
   }
   &.gulu-theme-button{
-    &.gulu-size-big{
-      font-size: 24px;
-      height: 48px;
-      padding: 0 16px
-    }
-    &.gulu-size-small{
-      font-size: 12px;
-      height: 20px;
-      padding: 0 4px;
-    }
+
   }
 }
 </style>

@@ -13,6 +13,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .gulu-button {
   box-sizing: border-box;
   height: 20px;
@@ -104,6 +105,19 @@ $red: red;
         border-color: darken($red, 10%);
       }
     }
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.gulu-theme-link, &.gulu-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+    }
   }
 }
 </style>
@@ -123,7 +137,11 @@ export default{
         level:{ 
             type: String,
             default: "normal",
-        }
+        },
+        disabled:{ 
+            type:Boolean,
+            default:false
+        },
     },
     inheritAttrs:false,
     setup(props){

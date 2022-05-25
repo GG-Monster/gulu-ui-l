@@ -7,7 +7,11 @@
 <Dialog v-model:visible="visible" 
         :closeOnClickOverlay="true"
         :ok="f1" :cancel="f2"
-        ></Dialog>
+        
+        >
+        <div>h1</div>
+        <div>h2</div>
+        </Dialog>
 <div></div>
 </template>
 <script lang="ts">

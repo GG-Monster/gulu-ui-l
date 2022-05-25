@@ -3,10 +3,9 @@
     <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
 <div class="gulu-dialog-wrapper">
     <div class="gulu-dialog">
-        <header>标题<span class="gulu-dialog-close" @click="close"></span></header>
+        <header>{{title}}<span class="gulu-dialog-close" @click="close"></span></header>
         <main>
-            <p>第一行</p>
-            <p>第二行</p>
+            <slot></slot>
         </main>
         <footer>
             <Button level="main" @click="ok1">OK</Button>
@@ -43,6 +42,10 @@ export default{
     },
     components:{Button,},
     props:{
+      title:{ 
+        type:String,
+        default:'提示',
+      },
         visible:{
         type:Boolean,
         default:false

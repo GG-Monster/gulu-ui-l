@@ -1,16 +1,16 @@
 <template>
 <template v-if="visible">
-    <div class="gulu-dialog-overlay"></div>
+    <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
 <div class="gulu-dialog-wrapper">
     <div class="gulu-dialog">
-        <header>标题<span class="gulu-dialog-close"></span></header>
+        <header>标题<span class="gulu-dialog-close" @click="close"></span></header>
         <main>
             <p>第一行</p>
             <p>第二行</p>
         </main>
         <footer>
-            <Button level="main">OK</Button>
-            <Button>Cancel</Button>
+            <Button level="main" @click="ok1">OK</Button>
+            <Button @click="cancel1">Cancel</Button>
         </footer>
     </div>
 </div>
@@ -20,16 +20,48 @@
 <script lang="ts">
 import Button from "./Button.vue";
 export default{ 
+    setup(props,context){
+      const close=()=>{ 
+        context.emit('update:visible',false)
+      }
+      const onClickOverlay=()=>{ 
+        if(props.closeOnClickOverlay){ 
+          close()
+        }
+      }
+      const ok1=()=>{ 
+          if(props.ok?.()!==false){ 
+            close()
+          }
+      }
+      const cancel1=()=>{ 
+        context.emit('cancel1')
+        close()
+      }
+      
+      return {close,onClickOverlay,ok1,cancel1}
+    },
     components:{Button,},
     props:{
         visible:{
         type:Boolean,
         default:false
     },
+        closeOnClickOverlay:{ 
+          type:Boolean,
+          default:true
+        },
+        ok:{ 
+          type:Function,
+        },
+        cancel:{ 
+          type:Function,
+        }
     },
 }
 </script>
 <style lang="scss">
+
 $radius: 4px;
 $border-color: #d9d9d9;
 .gulu-dialog {

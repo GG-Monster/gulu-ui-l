@@ -1,5 +1,6 @@
-import Dialog from "./Dialog.vue";
+
 import { createApp, h } from "vue";
+import Dialog from './Dialog.vue'
 export const openDialog = (options) => {
     const { title, content, ok, cancel } = options;
     const div = document.createElement("div");

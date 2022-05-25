@@ -19,7 +19,6 @@
         </Dialog>
         <h1>示例2</h1>
         <Button @click="showDialog">show</Button>
-<div></div>
 </template>
 <script lang="ts">
 import Dialog from '../lib/Dialog.vue'

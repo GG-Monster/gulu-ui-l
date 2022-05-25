@@ -9,8 +9,13 @@
         :ok="f1" :cancel="f2"
         
         >
-        <div>h1</div>
-        <div>h2</div>
+        <template v-slot:title>
+            <strong>这里是标题</strong>
+        </template>
+        <template v-slot:content>
+            <strong>这里是h1</strong>
+            <div>h2</div>
+        </template>
         </Dialog>
 <div></div>
 </template>

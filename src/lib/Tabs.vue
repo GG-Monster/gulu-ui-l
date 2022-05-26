@@ -63,6 +63,9 @@ $border-color: #d9d9d9;
       } 
       &.selected {
         color: $blue;
+        border-bottom: 3px solid $blue;
+        border-radius: 3px;
+        // border-bottom-left-radius:3px;
       }
     }
   }

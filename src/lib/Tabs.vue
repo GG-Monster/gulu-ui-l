@@ -6,9 +6,7 @@
      :key="index">{{t}}</div>
   </div>
   <div class="gulu-tabs-content">
-<component class="gulu-tabs-content-item" 
-:class="{selected: c.props.title === selected }" 
-v-for="(c,index) in defaults" :key="index" :is="c" />
+<component :is="current" :key="current.props.title"/>
   </div>
 </div>
 </template>
@@ -32,15 +30,15 @@ setup(props,context){
       return tag.props.title
     })
     const current = computed(() => {
-      return defaults.filter((tag) => {
+      return defaults.find((tag) => {
         return tag.props.title === props.selected
-      })[0]
+      })
     })
     const select = (title: string) => {
       context.emit('update:selected', title)
     }
     return { 
-        defaults,titles,current,select
+        defaults,titles,current,select,
     }
 }
 }
@@ -65,18 +63,13 @@ $border-color: #d9d9d9;
         color: $blue;
         border-bottom: 3px solid $blue;
         border-radius: 3px;
+
         // border-bottom-left-radius:3px;
       }
     }
   }
   &-content {
     padding: 8px 0;
-       &-item{ 
-           display: none;
-           &.selected {
-            display: block;
-                      }
-       }
   }
 }
 </style>

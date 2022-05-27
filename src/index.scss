@@ -23,13 +23,14 @@ a {
     color: inherit;
 
     &:hover {
-        border-bottom: 1px solid;
+        text-decoration: underline;
         cursor: pointer;
     }
 }
 
 body {
-    font-size: 16px;
+    font-size: 1.5;
+    color: #1d2c40;
     // 为什么这样写 font-family
     // 答案见 https://github.com/zenozeng/fonts.css/
     font-family: -apple-system, "Noto Sans",

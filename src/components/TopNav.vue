@@ -1,12 +1,19 @@
 <template>
 
     <div class="topNav">
-      <div class="logo" >LOGO</div>
+      <div class="logo" >
+        <svg class="icon-monster">
+    <use xlink:href="#icon-monster"></use>
+</svg></div>
       <ul class="menu">
         <li>菜单1</li>
         <li>菜单2</li>
         </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <span class="toggleAside" @click="toggleMenu">
+    <svg class="icon-liebiao">
+    <use xlink:href="#icon-liebiao"></use>
+</svg>
+    </span>
     </div>
 
 </template>
@@ -45,8 +52,15 @@ export default{
     white-space: nowrap;
     flex-wrap: nowrap;
     > li {
-      margin: 0 1em;
+      margin: 0 0.5em;
+      display: inline-block;
+      border-radius: 4px;
+      padding: 5px;
+      &:hover{ 
+      background-color: #76bc93;
     }
+    }
+    
   }
   > .toggleMenu{
 
@@ -55,7 +69,7 @@ export default{
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: red;
+    // background: red;
     position: absolute;
     left: 16px;
     top: 50%;
@@ -71,5 +85,19 @@ export default{
           display: inline-block;
       }
   }
+}
+
+.icon-monster {
+    width: 2.6em;
+    height: 2.6em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.icon-liebiao {
+   margin-top: -5px;
+    width: 1.6em;
+    height: 1.6em;
+    fill: currentColor;
+    overflow: hidden;
 }
 </style>

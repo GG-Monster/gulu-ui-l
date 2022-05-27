@@ -33,13 +33,16 @@ export default{
     padding: 8px 0;
     a {
       margin:0 8px;
-      background: #fff;
+      background: yellow;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
-      padding: 0 8px;
+      border-radius: 4px;
+      padding: 10px 16px;
+      height:40px;
+      line-height: 20px;
+      &:hover{ 
+        text-decoration: none;
+        background-color: greenyellow;
+      }
     }
   }
 }

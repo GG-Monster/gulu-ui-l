@@ -9,7 +9,35 @@
             <router-link to="/doc/default">开始</router-link>
         </p>
   </div>
-  
+  </div>
+    <div class="features">
+      <ul>
+        <li>
+          <svg>
+    <use xlink:href="#icon-vue"></use>
+    </svg>
+    <h3>基于 Vue 3</h3>
+    <p>骄傲地使用了 Vue 3 Composition API</p>
+    </li>
+        <li>
+          <svg>
+    <use xlink:href="#icon-ts"></use>
+    </svg>
+    <h3>基于 TypeScript </h3>
+    <p>源代码采用 TypeScript 书写（非严格检查）</p>
+    </li>
+        <li>
+          <svg>
+    <use xlink:href="#icon-light"></use>
+    </svg>
+    <h3>代码易读</h3>
+    <p>每个组件的源代码都极其简洁</p>
+    </li>
+          
+    
+    
+
+      </ul>
   </div>
 </template>
 <script lang="ts">
@@ -20,19 +48,26 @@ export default{
 </script>
 <style lang="scss" scoped>
 .topNav-Banner{ 
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, 
+  rgba(253,187,45,1) 100%);
+  // height: 600px;
+  border-bottom-left-radius: 400px 100px;
+  border-bottom-right-radius: 400px 100px;
+
 }
 .banner {
-  padding: 100px 0;
+// height: 100%;
+  padding: 150px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   // background: lightgreen;
   > .actions{
-    padding: 8px 0;
+    padding: 60px;
+    padding-bottom: 0;
     a {
-      margin:0 8px;
+      margin:0 18px;
       background: yellow;
       display: inline-block;
       border-radius: 4px;
@@ -45,5 +80,61 @@ export default{
       }
     }
   }
+}
+.features{ 
+  // width: 400px;
+  // height:600px;
+  // border: 1px solid red;
+  // position: absolute;
+  // left: 50%;
+  // border: 1px solid red;
+  margin: 64px auto;
+  // margin-left: 10px;
+  width: 400px;
+  @media (min-width: 800px) {
+    width: 800px;
+  }
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+  >ul {
+    display: flex;
+    flex-wrap: wrap;
+    >li {
+      width: 400px;
+      margin: 16px 0;
+      // margin-left: 20px;
+      display: grid;
+      justify-content: start;
+      align-content: space-between;
+      grid-template-areas:
+        "icon title"
+        "icon text";
+      grid-template-columns: 80px auto;
+      grid-template-rows: 1fr auto;
+      >svg {
+        grid-area: icon;
+        width: 64px;
+        height: 64px;
+      }
+      >h3 {
+        grid-area: title;
+        font-size: 28px;
+      }
+      >p {
+        grid-area: text
+      }
+    }
+  }
+}
+.icon{ 
+    // width: 4em;
+    // height: 4em;
+    // fill: currentColor;
+    // overflow: hidden;
+    // display: block;
+    // margin: 80px 0px;
+    // justify-content: center;
+
 }
 </style>

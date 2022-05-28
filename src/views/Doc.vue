@@ -1,6 +1,6 @@
 <template>
 <div class="layout">
-    <TopNav class="nav" />
+    <TopNav class="nav" toggleMenuButtonVisible/>
     <div class="content">
         <aside v-if="menuVisible">
             <h2>组建列表</h2>

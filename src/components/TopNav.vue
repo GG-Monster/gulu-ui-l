@@ -1,15 +1,19 @@
 <template>
 
     <div class="topNav">
-      <div class="logo" >
+      <router-link to="/" class="logo" >
         <svg class="icon-monster">
     <use xlink:href="#icon-monster"></use>
-</svg></div>
+</svg></router-link>
       <ul class="menu">
-        <li>菜单1</li>
-        <li>菜单2</li>
+        <li>
+      <router-link to="/doc">文档</router-link>
+        </li>
+
         </ul>
-    <span class="toggleAside" @click="toggleMenu">
+    <span class="toggleAside" @click="toggleMenu"
+    v-if="toggleMenuButtonVisible"
+    >
     <svg class="icon-liebiao">
     <use xlink:href="#icon-liebiao"></use>
 </svg>
@@ -20,6 +24,12 @@
 <script lang="ts">
 import { inject,Ref} from 'vue'
 export default{
+  props:{ 
+    toggleMenuButtonVisible:{ 
+      type:Boolean,
+      default:false
+    }
+  },
     setup(){
         const menuVisible=inject<Ref<boolean>>('menuVisible')
         

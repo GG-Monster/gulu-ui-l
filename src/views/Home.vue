@@ -5,7 +5,7 @@
         <h1>轱辘UI</h1>
         <h2>一个厉害的ui框架</h2>
         <p class="actions">
-            <a href="https://github.com/">github</a>
+            <a href="https://github.com/GG-Monster">github</a>
             <router-link to="/doc/default">开始</router-link>
         </p>
   </div>

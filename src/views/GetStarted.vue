@@ -1,8 +1,12 @@
 <template>
-开始使用
+<article class="markdown-body" v-html="md">
+</article>
 </template>
-<script lang="ts">
+<script>
+import md from '../markdown/get-started.md'
 export default{ 
-
+data(){ 
+    return{ md}
+}
 }
 </script>

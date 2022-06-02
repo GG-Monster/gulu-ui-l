@@ -89,19 +89,30 @@ export default{
   // left: 50%;
   // border: 1px solid red;
   margin: 64px auto;
+  // padding: 0 16px;
   // margin-left: 10px;
-  width: 400px;
+  // width: 400px;
   @media (min-width: 800px) {
     width: 800px;
+      >ul {
+      >li {
+        width: 50%;
+      }
+    }
   }
   @media (min-width: 1200px) {
     width: 1200px;
+     >ul {
+      >li {
+        width: 33.3333%;
+      }
+    }
   }
   >ul {
     display: flex;
     flex-wrap: wrap;
     >li {
-      width: 400px;
+      // width: 400px;
       margin: 16px 0;
       // margin-left: 20px;
       display: grid;

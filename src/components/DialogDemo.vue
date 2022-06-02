@@ -2,9 +2,7 @@
 <h1>
     Dialog示例
 </h1>
-<h1>示例1</h1>
 <Demo :component='Dialog1Demo'/>
-<h1>示例2</h1>
 <Demo :component='Dialog2Demo'/>
 </template>
 <script lang="ts">

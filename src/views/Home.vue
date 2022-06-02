@@ -1,5 +1,6 @@
 <template>
-  <div class="topNav-Banner">
+
+<div class="topNav-Banner">
     <TopNav />
     <div class="banner">
         <h1>轱辘UI</h1>
@@ -39,6 +40,7 @@
 
       </ul>
   </div>
+  <div class="footer"></div>
 </template>
 <script lang="ts">
 import TopNav from "../components/TopNav.vue";
@@ -56,7 +58,7 @@ export default{
 
 }
 .banner {
-// height: 100%;
+height: 400px;
   padding: 150px 0;
   display: flex;
   justify-content: center;
@@ -88,7 +90,7 @@ export default{
   // position: absolute;
   // left: 50%;
   // border: 1px solid red;
-  margin: 64px auto;
+  margin: 40px auto;
   // padding: 0 16px;
   // margin-left: 10px;
   // width: 400px;
@@ -138,14 +140,13 @@ export default{
     }
   }
 }
-.icon{ 
-    // width: 4em;
-    // height: 4em;
-    // fill: currentColor;
-    // overflow: hidden;
-    // display: block;
-    // margin: 80px 0px;
-    // justify-content: center;
+.footer{ 
 
+  height: 500px;
+  background: linear-gradient(0deg, rgba(253,187,45,1) 0%,
+  rgba(34,193,195,1) 100%
+  );
+  border-top-left-radius: 400px 100px;
+  border-top-right-radius: 400px 100px;
 }
 </style>

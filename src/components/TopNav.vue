@@ -2,12 +2,17 @@
 
     <div class="topNav">
       <router-link to="/" class="logo" >
-        <svg class="icon-monster">
+        <span title="返回首页">
+          <svg class="icon-monster">
     <use xlink:href="#icon-monster"></use>
-</svg></router-link>
+</svg>
+        </span>
+        
+      </router-link>
+      
       <ul class="menu">
         <li>
-      <router-link to="/doc">文档</router-link>
+      <router-link to="/doc/intro">文档</router-link>
         </li>
 
         </ul>
@@ -56,6 +61,8 @@ export default{
   > .logo {
     max-width: 6em;
     margin-right: auto;
+
+    
   }
   > .menu {
     display: flex;

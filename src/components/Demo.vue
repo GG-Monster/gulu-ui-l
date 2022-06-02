@@ -5,7 +5,10 @@
       <component :is="component"></component>
     </div>
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <Button @click="toggleCode" class="new-button-class">
+      <svg class="icon-code">
+    <use xlink:href="#icon-code"></use>
+</svg></Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" 
@@ -48,6 +51,7 @@ export default{
 $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
+  border-radius: 20px;
   margin: 16px 0 32px;
   >h2 {
     font-size: 20px;
@@ -60,6 +64,17 @@ $border-color: #d9d9d9;
   &-actions {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
+    .new-button-class{ 
+      padding: 0;
+      width: 30px;
+      height: 26px;
+      border: none;
+    }
+    .icon-code{ 
+
+      height: 100%;
+      color: red;
+    }
   }
   &-code {
     padding: 8px 16px;
@@ -70,4 +85,6 @@ $border-color: #d9d9d9;
       margin: 0;
     }
   }
-}</style>
+}
+
+</style>

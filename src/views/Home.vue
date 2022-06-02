@@ -6,7 +6,7 @@
         <h2>一个厉害的ui框架</h2>
         <p class="actions">
             <a href="https://github.com/GG-Monster">github</a>
-            <router-link to="/doc/default">开始</router-link>
+            <router-link to="/doc/intro">开始</router-link>
         </p>
   </div>
   </div>
@@ -17,7 +17,7 @@
     <use xlink:href="#icon-vue"></use>
     </svg>
     <h3>基于 Vue 3</h3>
-    <p>骄傲地使用了 Vue 3 Composition API</p>
+    <p>使用了 Vue 3 Composition API</p>
     </li>
         <li>
           <svg>
@@ -28,10 +28,10 @@
     </li>
         <li>
           <svg>
-    <use xlink:href="#icon-light"></use>
+    <use xlink:href="#icon-scss"></use>
     </svg>
-    <h3>代码易读</h3>
-    <p>每个组件的源代码都极其简洁</p>
+    <h3>基于Scss</h3>
+    <p>Scss:强大的css预处理语言,其完全兼容css3,并且继承了Sass的强大功能.</p>
     </li>
           
     

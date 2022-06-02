@@ -48,14 +48,13 @@ export default{
 </script>
 <style lang="scss" scoped>
 .topNav {
-  // background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
   > .logo {

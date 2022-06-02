@@ -5,6 +5,7 @@
   <Demo :component="Button3Demo" />
   <Demo :component="Button4Demo" />
   <Demo :component="Button5Demo" />
+  <span>下一节：<router-link to="/doc/dialog" class="button-link">dialog组件</router-link></span>
 </template>
 <script lang="ts">
 import Demo from "./Demo.vue";
@@ -25,7 +26,8 @@ export default{
     },
 }
 </script>
-<style lang="scss">
-
-
+<style lang="scss" scoped>
+.button-link{ 
+  color: #0969da;
+}
 </style>

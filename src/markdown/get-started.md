@@ -26,3 +26,5 @@ export default {
 }
 </script>
 ```
+
+下一节：[switch组件](#/doc/switch)

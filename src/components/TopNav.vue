@@ -82,7 +82,7 @@ export default{
 
   }
   > .toggleAside {
-    display: inline-block;
+    //display: inline-block;
     width: 24px;
     height: 24px;
     // background: red;

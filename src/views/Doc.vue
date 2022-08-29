@@ -59,8 +59,10 @@ export default{
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
+    //display: none;
     @media (max-width: 500px) {
-      padding-left: 0; 
+      padding-left: 0;
+      //display: inline-block;
     }
   }
 }
@@ -86,6 +88,7 @@ aside{
     padding-top: 70px;
     height: 100%;
     z-index: 10;
+
     > h2{
         margin-bottom: 4px;
         padding: 0 16px;
